@@ -11,14 +11,14 @@ services:
       AWS_SECRET_ACCESS_KEY: ipbJb1+CsEG8ksBGmQUUwtY2cchLfxJqYVC2yRq+
     depends_on:
       - "mongo"
-#  front-end:
-#    build: ./frontend
-#    container_name: front-end
-#    command: npm run start
-#    ports:
-#      - "3000:3000"
-#    depends_on:
-#      - "backend-template"
+  front-end:
+    build: ./frontend
+    container_name: front-end
+    command: npm run start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "backend-template"
   mongo:
     image: mongo
     container_name: mongo_db
