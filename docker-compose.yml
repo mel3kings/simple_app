@@ -6,9 +6,6 @@ services:
     command: npm run start
     ports:
       - "3001:3001"
-    environment:
-      AWS_ACCESS_KEY_ID: AKIAY2N6MOU2HCYDN5H3
-      AWS_SECRET_ACCESS_KEY: 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
     depends_on:
       - "mongo"
   front-end:
