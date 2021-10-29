@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "preinstall": "git config core.hooksPath hooks",
     "test": "(cd frontend && npm run test); (cd backend && npm run test);"
   },
   "dependencies": {
