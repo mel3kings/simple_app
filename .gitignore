@@ -3,3 +3,5 @@
 ./backend/node_modules
 ./backend/build
 node_modules
+.idea
+.DS_Store
