@@ -40,3 +40,6 @@ docker run \
 -v "/Users/melchor_tatlonghari/workspace/${LOCAL_DIRECTORY}:/usr/src" \
 sonarsource/sonar-scanner-cli
 ```
+
+# NOTES:
+- Full standalone frontend: https://www.npmjs.com/package/notarealdb
