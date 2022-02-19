@@ -8,14 +8,14 @@ services:
       - "3001:3001"
     depends_on:
       - "mongo"
-#  front-end:
-#    build: ./frontend
-#    container_name: front-end
-#    command: npm run start
-#    ports:
-#      - "3000:3000"
-#    depends_on:
-#      - "backend-template"
+  front-end:
+    build: ./frontend
+    container_name: front-end
+    command: npm run start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "backend-template"
   mongo:
     image: mongo
     container_name: mongo_db
