@@ -1,4 +1,5 @@
 const {getAllData, getData} = require("../db/dbClient");
+require('dotenv').config();
 
 exports.getAllData = async (req, res) => {
     const topic = req.query.topic ? req.query.topic : '';
@@ -10,7 +11,7 @@ exports.getAllData = async (req, res) => {
 };
 
 exports.health = (req, res) => {
-    res.send({body: 'Health Check'})
+    res.send({body: `Health Check ${process.env.MESSAGE}`})
 };
 
 exports.getById = async (req, res) => {

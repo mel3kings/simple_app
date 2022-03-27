@@ -7,7 +7,7 @@ export const backendAPI = {
                 headers: {'Content-Type': 'application/json'}
             }
             const companyQuery = company === "" ? "" : `?companyId=${company}`
-            const localURI = `http://localhost:3001/data/article`
+            const localURI = `${process.env.REACT_APP_BACKEND_API}`
             const res = await fetch(localURI, headers).then(response => response.json())
             return res.body
         } catch (e) {
