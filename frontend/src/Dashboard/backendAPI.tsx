@@ -1,5 +1,5 @@
 export const backendAPI = {
-    async getData(company = "") {
+    async getData(company: string | string[]) {
         try {
             const headers = {
                 crossDomain: true,
@@ -15,11 +15,11 @@ export const backendAPI = {
             return {}
         }
     },
-    submitData(request){
-        if(!request.companyId || !request.topics || request.topics.length === 0){
+    submitData(request: RequestType) {
+        if (!request.companyId || !request.topics || request.topics.length === 0) {
             return;
         }
-        const req =JSON.stringify(request)
+        const req = JSON.stringify(request)
         console.log(`sending request ${req}`)
         try {
             const headers = {
@@ -35,4 +35,10 @@ export const backendAPI = {
             return;
         }
     },
+}
+
+type RequestType = {
+    companyId: string;
+    topics: string[];
+
 }

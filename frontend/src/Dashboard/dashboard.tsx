@@ -4,10 +4,11 @@ import {
     ButtonContainer,
     ContentBody, BriefCard
 } from "./dashboard.styled";
+// @ts-ignore
 import queryString from "querystring";
 import {Link} from "react-router-dom";
 
-export const Dashboard = ({location}) => {
+export const Dashboard = ({location}: any) => {
     const parsed = (location && location.search) ? queryString.parse(location.search.slice(1)) : undefined;
     const companyId = (parsed && parsed.companyId) ? parsed.companyId : ''
     useEffect(() => {
